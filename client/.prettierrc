@@ -1,0 +1,28 @@
+{
+	"singleQuote": true,
+	"trailingComma": "all",
+	"useTabs": true,
+	"tabWidth": 2,
+	"semi": false,
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@pages(/.*$(?<!\\.scss))?$",
+
+		"^@components(/.*$(?<!\\.scss))?$",
+
+		"^@store(/.*)?$",
+		"^@types(/.*)?$",
+		"^@configs(/.*)?$",
+		"^@services(/.*)?$",
+		"^@hooks(/.*)?$",
+
+		"^@utils(/.*$(?<!\\.scss))?$",
+
+		"^..(/.*$(?<!\\.scss))?$",
+		"^.(/.*$(?<!\\.scss))?$",
+
+		"(.scss)$"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifies": true
+}

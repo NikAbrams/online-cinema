@@ -1,8 +1,11 @@
 {
-	"name": "server",
+	"name": "online-cinema-server",
 	"version": "0.0.1",
-	"description": "",
-	"author": "",
+	"description": "Online cinema application",
+	"author": {
+		"email": "mr.nik.prog@gmail.com",
+		"name": "Nikita Abramenko"
+	},
 	"private": true,
 	"license": "UNLICENSED",
 	"scripts": {
