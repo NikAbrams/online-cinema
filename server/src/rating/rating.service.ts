@@ -31,7 +31,7 @@ export class RatingService {
 		const ratings = await this.RatingModel.aggregate().match({
 			movie: new Types.ObjectId(movieId),
 		})
-		
+
 		return ratings.reduce((acc, item) => acc + item.value, 0) / ratings.length
 	}
 

@@ -4,7 +4,7 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
-		'./src/components/**/*.{js,ts,jsx,tsx}',
+		'./app/components/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
 		colors: {
@@ -27,15 +27,15 @@ module.exports = {
 		},
 		extend: {
 			spacing: {
-				0.5: '0.2rem',
-				layout: '4.4rem',
+				0.5: '0.12rem',
+				layout: '2.75rem',
 			},
 			fontSize: {
-				'2lg': '2.2rem',
+				'2lg': '1.38rem',
 			},
 			borderRadius: {
-				image: '0.8rem',
-				layout: '1.3rem',
+				image: '0.5rem',
+				layout: '0.8rem',
 			},
 			transitionTimingFunction: {
 				DEFAULT: 'ease-in-out',
@@ -83,7 +83,7 @@ module.exports = {
 				'.btn-primary': {
 					backgroundColor: '#e30b13',
 					color: '#fff',
-					borderRadius: '1rem',
+					borderRadius: '0.65rem',
 					transition: 'background-color 0.3s ease-in-out',
 					'&:hover': {
 						backgroundColor: '#ff0009',

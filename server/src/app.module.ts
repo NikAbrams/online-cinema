@@ -17,9 +17,9 @@ import { AppService } from './app.service'
 
 // Common
 import { getMongoDbConfig } from '@configs'
-import { MovieModule } from './movie/movie.module';
-import { RatingModule } from './rating/rating.module';
-import { TelegramModule } from './telegram/telegram.module';
+import { MovieModule } from './movie/movie.module'
+import { RatingModule } from './rating/rating.module'
+import { TelegramModule } from './telegram/telegram.module'
 
 @Module({
 	imports: [
