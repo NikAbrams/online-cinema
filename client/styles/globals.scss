@@ -12,6 +12,28 @@ body {
 	margin: 0;
 
 	font-family: 'Outfit', sans-serif;
+
+	height: 10000px;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	@apply bg-gray-900;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	@apply bg-gray-600 rounded-lg;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-opacity-90;
 }
 
 a {

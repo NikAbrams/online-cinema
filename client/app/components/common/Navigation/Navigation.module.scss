@@ -8,12 +8,12 @@
 
 .section {
 	.title {
-		@apply text-gray-500 uppercase text-sm font-semibold pl-layout mb-6;
+		@apply text-gray-500 uppercase text-sm font-semibold px-layout mb-6;
 	}
-}
 
-.list {
-	@apply flex flex-col gap-y-6;
+	.list {
+		@apply flex flex-col gap-y-6;
+	}
 }
 
 .item {

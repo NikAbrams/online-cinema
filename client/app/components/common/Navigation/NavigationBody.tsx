@@ -4,7 +4,7 @@ import { useQuery } from 'react-query'
 import { GenreService } from '@services'
 
 import { MENU_SECTION } from './Navigation.constants'
-import { NavigationAuthSection } from './NavigationAuthSection'
+import { NavigationGeneral } from './NavigationGeneral'
 import { INavigationItem } from './NavigationItem'
 import { NavigationSection } from './NavigationSection'
 
@@ -13,7 +13,7 @@ import styles from './Navigation.module.scss'
 export const NavigationBody: FC = () => {
 	const { data, isLoading } = useQuery(
 		'genres-section',
-		() => GenreService.getAllGenres(),
+		() => GenreService.getGenres(),
 		{
 			select: ({ data }) =>
 				data
@@ -35,7 +35,7 @@ export const NavigationBody: FC = () => {
 				isLoading={isLoading}
 			/>
 
-			<NavigationAuthSection />
+			<NavigationGeneral />
 		</div>
 	)
 }

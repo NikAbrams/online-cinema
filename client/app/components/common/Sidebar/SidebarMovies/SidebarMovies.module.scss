@@ -1,0 +1,65 @@
+.movies {
+	@apply flex flex-col gap-y-11;
+}
+
+.section {
+	.title {
+		@apply mb-5 font-bold text-lg text-white capitalize;
+	}
+
+	.list {
+		@apply flex flex-col gap-y-4;
+	}
+
+	.button {
+		@apply block mt-4 p-2.5 btn-primary text-center;
+	}
+}
+
+.item {
+	@apply flex gap-x-4 items-stretch;
+
+	.image {
+		img {
+			@apply rounded-image transition-colors;
+
+			border: 1px solid transparent !important;
+		}
+
+		&:hover {
+			img {
+				border-color: var(--primary-color) !important;
+			}
+		}
+	}
+
+	.info {
+		@apply flex flex-col justify-between;
+
+		width: 67%;
+	}
+
+	.title {
+		@apply text-white text-lg font-bold truncate;
+	}
+
+	.genres {
+		@apply text-gray-600 text-sm;
+	}
+
+	.rating {
+		@apply flex items-center mb-2;
+
+		& > svg {
+			@apply mr-2 fill-yellow-700 text-lg;
+		}
+
+		& > span {
+			@apply pt-0.5 text-white font-medium;
+		}
+	}
+}
+
+.message {
+	@apply mt-11 py-7 px-5 text-white text-opacity-80 bg-gray-700 bg-opacity-20 rounded-lg;
+}

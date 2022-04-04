@@ -1,2 +1,6 @@
 export * from './Logo/Logo'
 export * from './Icon/Icon'
+export * from './Meta/Meta'
+export * from './Heading/Heading'
+export * from './SkeletonLoader/SkeletonLoader'
+export * from './SearchField/SearchField'
