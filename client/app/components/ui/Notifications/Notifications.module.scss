@@ -1,0 +1,11 @@
+.notifications {
+	.toast {
+		@apply bg-gray-700 bg-opacity-20 rounded-lg;
+	}
+
+	.body {
+		@apply text-white text-opacity-80 text-base;
+
+		font-family: 'Outfit', sans-serif;
+	}
+}

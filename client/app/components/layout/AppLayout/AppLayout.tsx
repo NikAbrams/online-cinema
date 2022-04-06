@@ -2,9 +2,9 @@ import { FC } from 'react'
 
 import { Navigation, Sidebar } from '@components/common'
 
-import styles from './PageLayout.module.scss'
+import styles from './AppLayout.module.scss'
 
-export const PageLayout: FC = ({ children }) => {
+export const AppLayout: FC = ({ children }) => {
 	return (
 		<div className={styles.layout}>
 			<Navigation />

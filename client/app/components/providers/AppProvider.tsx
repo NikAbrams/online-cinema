@@ -1,7 +1,13 @@
 import { FC } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { Provider } from 'react-redux'
 
-import { PageLayout } from '@components/layout'
+import { AppLayout } from '@components/layout'
+import { Notifications } from '@components/ui'
+
+import { store } from '@store'
+
+import { HeadProvider } from './HeadProvider'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -14,8 +20,13 @@ const queryClient = new QueryClient({
 
 export const AppProvider: FC = ({ children }) => {
 	return (
-		<QueryClientProvider client={queryClient}>
-			<PageLayout>{children}</PageLayout>
-		</QueryClientProvider>
+		<HeadProvider>
+			<Provider store={store}>
+				<QueryClientProvider client={queryClient}>
+					<AppLayout>{children}</AppLayout>
+					<Notifications />
+				</QueryClientProvider>
+			</Provider>
+		</HeadProvider>
 	)
 }

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 
-import { clearText } from '@utils'
+import { clearText } from '@utils/helpers'
 
 export interface IMetaProps {
 	title: string

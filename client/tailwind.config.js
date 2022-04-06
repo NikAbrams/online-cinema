@@ -15,6 +15,9 @@ module.exports = {
 			yellow: {
 				700: '#f5c521',
 			},
+			red: {
+				500: colors.red[500],
+			},
 			gray: {
 				300: '#d9dae8',
 				500: '#999aa5',
@@ -78,6 +81,8 @@ module.exports = {
 		},
 	},
 	plugins: [
+		require('@tailwindcss/forms'),
+		require('@tailwindcss/aspect-ratio'),
 		plugin(({ theme, addComponents, addUtilities }) => {
 			addComponents({
 				'.btn-primary': {
