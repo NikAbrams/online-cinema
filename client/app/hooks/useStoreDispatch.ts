@@ -1,5 +1,6 @@
 // Store
 import { bindActionCreators } from '@reduxjs/toolkit'
+import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { StoreDispatchType, actions } from '@store'
@@ -7,5 +8,5 @@ import { StoreDispatchType, actions } from '@store'
 export const useStoreDispatch = () => {
 	const dispatch = useDispatch<StoreDispatchType>()
 
-	return bindActionCreators(actions, dispatch)
+	return useMemo(() => bindActionCreators(actions, dispatch), [dispatch])
 }

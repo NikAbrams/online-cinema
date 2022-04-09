@@ -7,6 +7,7 @@ import { Notifications } from '@components/ui'
 
 import { store } from '@store'
 
+import { AuthProvider } from './AuthProvider'
 import { HeadProvider } from './HeadProvider'
 
 const queryClient = new QueryClient({
@@ -22,10 +23,12 @@ export const AppProvider: FC = ({ children }) => {
 	return (
 		<HeadProvider>
 			<Provider store={store}>
-				<QueryClientProvider client={queryClient}>
-					<AppLayout>{children}</AppLayout>
-					<Notifications />
-				</QueryClientProvider>
+				<AuthProvider>
+					<QueryClientProvider client={queryClient}>
+						<AppLayout>{children}</AppLayout>
+						<Notifications />
+					</QueryClientProvider>
+				</AuthProvider>
 			</Provider>
 		</HeadProvider>
 	)

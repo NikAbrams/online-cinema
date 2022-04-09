@@ -1,10 +1,15 @@
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import { SkeletonLoader } from '@components/ui'
 
-import { INavigationItem, NavigationItem } from './NavigationItem'
+import { NavigationGeneral } from '../NavigationGeneral/NavigationGeneral'
+import {
+	INavigationItem,
+	NavigationItem,
+} from '../NavigationItem/NavigationItem'
 
-import styles from './Navigation.module.scss'
+import styles from './NavigationSection.module.scss'
 
 export interface INavigationSection {
 	title: string
@@ -35,6 +40,7 @@ export const NavigationSection: FC<INavigationSectionProps> = ({
 						<NavigationItem key={item.link} item={item} />
 					))
 				)}
+				{section.title === 'General' && <NavigationGeneral />}
 			</ul>
 		</div>
 	)

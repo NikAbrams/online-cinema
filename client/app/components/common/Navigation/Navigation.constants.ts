@@ -1,4 +1,4 @@
-import { INavigationSection } from './NavigationSection'
+import { INavigationSection } from './NavigationSection/NavigationSection'
 
 export const MENU_SECTION: INavigationSection = {
 	title: 'Menu',
@@ -24,4 +24,9 @@ export const MENU_SECTION: INavigationSection = {
 			title: 'Trending now',
 		},
 	],
+}
+
+export const GENERAL_SECTION: INavigationSection = {
+	title: 'General',
+	items: [],
 }

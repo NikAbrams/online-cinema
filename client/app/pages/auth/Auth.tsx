@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from 'react'
 import { Field, Form, SubmitBtn } from '@components/forms'
 import { Heading, Meta } from '@components/ui'
 
-import { useAuth } from '@hooks'
+import { useAuth, useStoreDispatch } from '@hooks'
 
 import { AuthDto } from './Auth.dto'
 
@@ -17,18 +17,13 @@ export const Auth: FC = () => {
 
 	const [type, setType] = useState<'login' | 'register'>('login')
 
+	const { login, register } = useStoreDispatch()
+
 	useEffect(() => {
-		const redirect = String(query.redirect) || '/'
+		// const redirect = String(query.redirect) || '/'
 
-		if (user) push(redirect)
+		if (user) push('/')
 	}, [user, push])
-
-	const login = (data: AuthDto) => {
-		console.table(data)
-	}
-	const register = (data: AuthDto) => {
-		console.table(data)
-	}
 
 	const handleSubmit = (data: AuthDto) => {
 		if (type === 'login') login(data)

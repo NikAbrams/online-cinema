@@ -7,7 +7,7 @@ export const Notifications = ({ ...rest }) => {
 	return (
 		<ToastContainer
 			closeOnClick={false}
-			autoClose={400000}
+			autoClose={4000}
 			pauseOnHover={false}
 			pauseOnFocusLoss={false}
 			draggable={false}

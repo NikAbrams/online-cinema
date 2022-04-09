@@ -1,6 +1,3 @@
-export const useAuth = () => {
-	return {
-		user: null,
-		isLoading: false,
-	}
-}
+import { useStoreSelector } from './useStoreSelector'
+
+export const useAuth = () => useStoreSelector((state) => state.auth)

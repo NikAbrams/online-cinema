@@ -3,12 +3,11 @@ import { useQuery } from 'react-query'
 
 import { GenreService } from '@services'
 
-import { MENU_SECTION } from './Navigation.constants'
-import { NavigationGeneral } from './NavigationGeneral'
-import { INavigationItem } from './NavigationItem'
-import { NavigationSection } from './NavigationSection'
+import { MENU_SECTION, GENERAL_SECTION } from '../Navigation.constants'
+import { INavigationItem } from '../NavigationItem/NavigationItem'
+import { NavigationSection } from '../NavigationSection/NavigationSection'
 
-import styles from './Navigation.module.scss'
+import styles from './NavigationBody.module.scss'
 
 export const NavigationBody: FC = () => {
 	const { data, isLoading } = useQuery(
@@ -35,7 +34,7 @@ export const NavigationBody: FC = () => {
 				isLoading={isLoading}
 			/>
 
-			<NavigationGeneral />
+			<NavigationSection section={GENERAL_SECTION} />
 		</div>
 	)
 }
