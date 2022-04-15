@@ -1,3 +1,5 @@
+import { NextPage } from 'next'
+
 import { IUser } from './user.types'
 
 export interface IAuth {
@@ -10,3 +12,10 @@ export interface IAuthResponse {
 	refreshToken: string
 	user: IUser
 }
+
+export type RolesType = {
+	isAdmin?: boolean
+	isUser?: boolean
+}
+
+export type NextPageAuth<P = {}> = NextPage<P> & RolesType

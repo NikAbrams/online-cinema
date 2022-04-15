@@ -7,6 +7,8 @@ import { Notifications } from '@components/ui'
 
 import { store } from '@store'
 
+import { RolesType } from '@types'
+
 import { AuthProvider } from './AuthProvider'
 import { HeadProvider } from './HeadProvider'
 
@@ -19,11 +21,11 @@ const queryClient = new QueryClient({
 	},
 })
 
-export const AppProvider: FC = ({ children }) => {
+export const AppProvider: FC<{ roles: RolesType }> = ({ children, roles }) => {
 	return (
 		<HeadProvider>
 			<Provider store={store}>
-				<AuthProvider>
+				<AuthProvider roles={roles}>
 					<QueryClientProvider client={queryClient}>
 						<AppLayout>{children}</AppLayout>
 						<Notifications />

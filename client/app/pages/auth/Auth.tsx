@@ -20,9 +20,9 @@ export const Auth: FC = () => {
 	const { login, register } = useStoreDispatch()
 
 	useEffect(() => {
-		// const redirect = String(query.redirect) || '/'
+		const redirect = query?.redirect ? String(query.redirect) : '/'
 
-		if (user) push('/')
+		if (user) push(redirect)
 	}, [user, push])
 
 	const handleSubmit = (data: AuthDto) => {

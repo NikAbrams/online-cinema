@@ -44,9 +44,10 @@ export const login = createAsyncThunk<IAuthResponse, IAuth>(
 
 export const logout = createAsyncThunk('auth/logout', async () => {
 	await AuthService.logout()
+	toast.success('You are logged out 🙃')
 })
 
-export const checkAuth = createAsyncThunk<IAuthResponse, IAuth>(
+export const checkAuth = createAsyncThunk<IAuthResponse>(
 	'auth/check-auth',
 	async (_, thunkApi) => {
 		try {

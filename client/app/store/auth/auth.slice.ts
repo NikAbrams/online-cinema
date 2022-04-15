@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { IUser } from '@types'
+import { IUserLocal } from '@types'
 
 import { login, logout, register } from './auth.actions'
 
 interface IInitialState {
-	user: Pick<IUser, 'email' | 'isAdmin'> | null
+	user: IUserLocal
 	isLoading: boolean
 }
 

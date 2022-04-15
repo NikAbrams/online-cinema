@@ -38,7 +38,7 @@ export const NavigationGeneral: FC = () => {
 				<NavigationItem
 					item={{
 						icon: 'MdOutlineLock',
-						link: '/manage',
+						link: '/admin',
 						title: 'Admin panel',
 					}}
 				/>

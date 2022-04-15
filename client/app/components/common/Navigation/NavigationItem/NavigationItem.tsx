@@ -27,13 +27,13 @@ export const NavigationItem: FC<{ item: INavigationItem }> = ({ item }) => {
 			{link && !action ? (
 				<Link href={link}>
 					<a className={styles.inner}>
-						{/* <Icon name={icon} /> */}
+						<Icon name={icon} />
 						<span>{title}</span>
 					</a>
 				</Link>
 			) : (
-				<div className={styles.inner}>
-					{/* <Icon name={icon} /> */}
+				<div className={styles.inner} onClick={action}>
+					<Icon name={icon} />
 					<span>{title}</span>
 				</div>
 			)}

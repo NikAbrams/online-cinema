@@ -1,15 +1,23 @@
+import { useRouter } from 'next/router'
 import { FC, useEffect } from 'react'
 
-import { useStoreDispatch } from '@hooks'
+import { RolesType } from '@types'
 
-export const AuthProvider: FC = ({ children }) => {
+import { useAuth, useStoreDispatch } from '@hooks'
+
+import { getUserLocally } from '@utils/helpers'
+
+export const AuthProvider: FC<{ roles: RolesType }> = ({ children, roles }) => {
+	const router = useRouter()
+	const { user } = useAuth()
 	const { setUser } = useStoreDispatch()
 
 	useEffect(() => {
-		if (typeof localStorage === 'undefined') return
-		const user = localStorage.getItem('user')
-		if (user) setUser(JSON.parse(user))
-	}, [])
+		const lsUser = user ? user : getUserLocally()
+		if (lsUser) setUser(lsUser)
+		if (roles.isAdmin && (!lsUser || !lsUser.isAdmin)) router.replace('/404')
+		if (roles.isUser && !lsUser) router.replace('/auth')
+	}, [user, roles])
 
 	return <>{children}</>
 }

@@ -1,6 +1,9 @@
-import { NextPage } from 'next'
+import { NextPageAuth } from '@types'
 
-const ProfilePage: NextPage = () => {
+const ProfilePage: NextPageAuth = () => {
 	return <div>profile</div>
 }
+
+ProfilePage.isUser = true
+
 export default ProfilePage

@@ -5,3 +5,5 @@ export interface IUser {
 	createdAt: string
 	isAdmin: boolean
 }
+
+export type IUserLocal = Pick<IUser, 'email' | 'isAdmin'> | null
